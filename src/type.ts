@@ -3,11 +3,17 @@ export type Customer = {
     name: string;
     cpf: string;
     birthDay: string;
-    balance: Balance
+    balance: number;
+    transactions: [Transaction]
 }
 
-export type Balance = {
-    amount: number;
-    date: string;
-    description: string;
+export type Transaction = {
+    date: number;
+    value: number;
+    type: string;
+    recipientName: string;
+    recipientCpf: string;
+    senderName: string;
+    senderCpf: string;
 }
+
